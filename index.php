@@ -13,6 +13,8 @@ $holkaMoney = 17;
 $succesfulmanMoney = 40;
 $podnikatelMoney = 100;
 $neprizpusobiviMoney = 50;
+$cigaPrice = 100;
+$bezdakKombo = $vodkaPrice+$cigaPrice
 
 $homelessMoney = $homelessMoney + $holkaMoney;
 echo "Holčina mu dala $holkaMoney<br>";
@@ -22,6 +24,8 @@ $homelessMoney = $homelessMoney + $podnikatelMoney;
 echo "Podnikatel který měl přeplněnou peněženku mu dal $podnikatelMoney bankovku<br>";
 $homelessMoney = $homelessMoney - $neprizpusobiviMoney;
 echo "Pak mu ukradli $neprizpusobiviMoney<br>";
+$homelessMoney = $homelessMoney + $bezdakKombo
+echo "Bezdomovec si chce koupit vodku a cigára.";
 ?>
 
 <?php
@@ -43,6 +47,23 @@ else {echo "Bezdomák nemá prachy. Sorry jakože.";
 }
 echo "Po návštěvě večerky $homelessMoney";
 ?>
+<?php
+    echo "zbytek bezdomovo zisku po návštěvě večerky: $homelessMoney" ;
+if
+  ($homelessMoney >= $bezdakKombo)
+    { $homelessMoney =  $homelessMoney - $bezdakKombo ;
+    echo"Bezďák má vodku a cíga a ";                             }
+elseif
+  ($homelessMoney >= $cigaPrice)
+    {$homelessMoney = $homelessMoney - $cigaPrice ;
+    echo "Bezďák neměl cash na Vodku tak si koupil jen cíga. ";  }
+ else {
+      echo "Bezďák odchází s prázdnou. ";
+    }
+     echo "zbytek bezdomovo zisku po návštěvě večerky: $homelessMoney" ;
+ ?>
 </body>
+
+
 
 </html>
